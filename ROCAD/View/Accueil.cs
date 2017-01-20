@@ -16,13 +16,13 @@ namespace ROCAD.View
 {
     public partial class mainWindow : Form
     {
-        public static bool isFr = false;
+        public static bool isFr = true;
         public static bool isDark = true;
 
         public mainWindow()
         {
             InitializeComponent();
-            initiliserTextes();
+            changeLangToFr();
             initialiserCouleurs();
 
         }
@@ -219,17 +219,6 @@ namespace ROCAD.View
             {
                 initialiserCouleurs();
             }
-        }
-
-        public void initiliserTextes()
-        {
-            /**
-             * Initialiser les Texte
-             **/
-            this.creerQcmButton.Text = "Create a MCQ";
-            this.correctQCM.Text = "Correct a MCQ";
-            this.openQCM.Text = "Open";
-            this.help.Text = "Help";
         }
 
         public void initialiserCouleurs()
