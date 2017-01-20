@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/msbuild/2003 ">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{08E6B068-245C-415B-8630-E2C794A40E2C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ROCAD</RootNamespace>
+    <AssemblyName>ROCAD</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>1</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ROCAD.Core.Launcher</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Pdf, Version=16.12.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.Pdf.16.12.0\lib\net40-client\Aspose.Pdf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Aspose.Pdf, Version=17.1.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56">
+      <HintPath>..\packages\Aspose.Pdf.17.1.0\lib\net40-client\Aspose.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.86.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b">
+      <HintPath>..\packages\ClosedXML.0.86.0\lib\net40\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca">
+      <HintPath>..\packages\iTextSharp.5.5.10\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Controls.Ribbon" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
+    <Reference Include="System.Windows.Input.Manipulations" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Presentation" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\CorrectionHandler.cs" />
+    <Compile Include="Controller\ExportationHandler.cs" />
+    <Compile Include="Controller\ImageHandler.cs" />
+    <Compile Include="Controller\MainController.cs" />
+    <Compile Include="Controller\MarkRecognizer.cs" />
+    <Compile Include="Controller\PDFHandler.cs" />
+    <Compile Include="Core\Launcher.cs" />
+    <Compile Include="Factory\StudentFactory.cs" />
+    <Compile Include="Factory\SubjectFactory.cs" />
+    <Compile Include="Model\Project.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Model\Question.cs" />
+    <Compile Include="Model\Response.cs" />
+    <Compile Include="Model\Student.cs" />
+    <Compile Include="Model\Subject.cs" />
+    <Compile Include="Properties\Resources.Designer.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Reconnaissance_Marque\Analyse.cs" />
+    <Compile Include="Reconnaissance_Marque\Case.cs" />
+    <Compile Include="Reconnaissance_Marque\CopyOtsu.cs" />
+    <Compile Include="Reconnaissance_Marque\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reconnaissance_Marque\Form1.Designer.cs" />
+    <Compile Include="Reconnaissance_Marque\Otsu.cs" />
+    <Compile Include="Reconnaissance_Marque\ZoneNumEtudiant.cs" />
+    <Compile Include="Reconnaissance_Marque\ZoneNumSujet.cs" />
+    <Compile Include="Utils\Utils.cs" />
+    <Compile Include="View\Accueil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Accueil.designer.cs">
+      <DependentUpon>Accueil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CorrectQCMEn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CorrectQCMEn.designer.cs">
+      <DependentUpon>CorrectQCMEn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CorrectQCMFr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CorrectQCMFr.designer.cs">
+      <DependentUpon>CorrectQCMFr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CorrectTermineeEn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CorrectTermineeEn.designer.cs">
+      <DependentUpon>CorrectTermineeEn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CorrectTermineeFr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CorrectTermineeFr.designer.cs">
+      <DependentUpon>CorrectTermineeFr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CreaQcm2En.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CreaQcm2En.designer.cs">
+      <DependentUpon>CreaQcm2En.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CreaQcm2Fr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CreaQcm2Fr.designer.cs">
+      <DependentUpon>CreaQcm2Fr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\creationQcmEn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\creationQcmEn.designer.cs">
+      <DependentUpon>creationQcmEn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\creationQcmFr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\creationQcmFr.designer.cs">
+      <DependentUpon>creationQcmFr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\settingsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\settingsWindow.designer.cs">
+      <DependentUpon>settingsWindow.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="bin\Debug\manual.pdf" />
+    <None Include="bin\Debug\ROCAD.exe.config" />
+    <None Include="bin\Debug\ROCAD.vshost.exe.config" />
+    <None Include="bin\Debug\ROCAD.vshost.exe.manifest" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\ROCAD.csproj.GenerateResource.Cache" />
+    <None Include="obj\Debug\ROCAD.csproj.ROCAD.exe.config" />
+    <None Include="obj\Debug\ROCAD.csprojResolveAssemblyReference.cache" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Aspose.Pdf.dll" />
+    <Content Include="bin\Debug\Aspose.Pdf.xml" />
+    <Content Include="bin\Debug\ClosedXML.dll" />
+    <Content Include="bin\Debug\ClosedXML.pdb" />
+    <Content Include="bin\Debug\de\System.Windows.Interactivity.resources.dll" />
+    <Content Include="bin\Debug\DocumentFormat.OpenXml.dll" />
+    <Content Include="bin\Debug\en\System.Windows.Interactivity.resources.dll" />
+    <Content Include="bin\Debug\es\System.Windows.Interactivity.resources.dll" />
+    <Content Include="bin\Debug\fr\System.Windows.Interactivity.resources.dll" />
+    <Content Include="bin\Debug\itextsharp.dll" />
+    <Content Include="bin\Debug\itextsharp.xml" />
+    <Content Include="bin\Debug\it\System.Windows.Interactivity.resources.dll" />
+    <Content Include="bin\Debug\ja\System.Windows.Interactivity.resources.dll" />
+    <Content Include="bin\Debug\ko\System.Windows.Interactivity.resources.dll" />
+    <Content Include="bin\Debug\MetroFramework.Design.dll" />
+    <Content Include="bin\Debug\MetroFramework.dll" />
+    <Content Include="bin\Debug\MetroFramework.Fonts.dll" />
+    <Content Include="bin\Debug\ROCAD.exe" />
+    <Content Include="bin\Debug\ROCAD.pdb" />
+    <Content Include="bin\Debug\ROCAD.vshost.exe" />
+    <Content Include="bin\Debug\ru\System.Windows.Interactivity.resources.dll" />
+    <Content Include="bin\Debug\System.Windows.Interactivity.dll" />
+    <Content Include="bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll" />
+    <Content Include="bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll" />
+    <Content Include="MetroFramework.txt" />
+    <Content Include="obj\Debug\ROCAD.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\ROCAD.exe" />
+    <Content Include="obj\Debug\ROCAD.pdb" />
+    <Content Include="packages.config" />
+    <Content Include="Reconnaissance_Marque\Form1.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="Images\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="obj\Debug\ROCAD.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Debug\ROCAD.View.CorrectQCMEn.resources" />
+    <EmbeddedResource Include="obj\Debug\ROCAD.View.CorrectQCMFr.resources" />
+    <EmbeddedResource Include="obj\Debug\ROCAD.View.CorrectTermineeEn.resources" />
+    <EmbeddedResource Include="obj\Debug\ROCAD.View.CorrectTermineeFr.resources" />
+    <EmbeddedResource Include="obj\Debug\ROCAD.View.CreaQcm2En.resources" />
+    <EmbeddedResource Include="obj\Debug\ROCAD.View.creaQcmWindow2.resources" />
+    <EmbeddedResource Include="obj\Debug\ROCAD.View.creationQcmEn.resources" />
+    <EmbeddedResource Include="obj\Debug\ROCAD.View.creationQcmFr.resources" />
+    <EmbeddedResource Include="obj\Debug\ROCAD.View.mainWindow.resources" />
+    <EmbeddedResource Include="obj\Debug\ROCAD.View.settingsWindow.resources" />
+    <EmbeddedResource Include="Properties\Resources.resx" />
+    <EmbeddedResource Include="View\Accueil.resx">
+      <DependentUpon>Accueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CorrectQCMEn.resx">
+      <DependentUpon>CorrectQCMEn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CorrectQCMFr.resx">
+      <DependentUpon>CorrectQCMFr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CorrectTermineeEn.resx">
+      <DependentUpon>CorrectTermineeEn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CorrectTermineeFr.resx">
+      <DependentUpon>CorrectTermineeFr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CreaQcm2En.resx">
+      <DependentUpon>CreaQcm2En.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CreaQcm2Fr.resx">
+      <DependentUpon>CreaQcm2Fr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\creationQcmEn.resx">
+      <DependentUpon>creationQcmEn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\creationQcmFr.resx">
+      <DependentUpon>creationQcmFr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\settingsWindow.resx">
+      <DependentUpon>settingsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
